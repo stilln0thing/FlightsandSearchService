@@ -7,7 +7,7 @@
    - `PORT = 3000`
 - Inside the `src/config` folder create a new file named `config.json` and then add the following piece of code
 
-...
+```
 {
 "development": {
     "username": <YOUR USERNAME>,
@@ -18,4 +18,6 @@
   }
 }
 
-...
+```
+
+-Once you have added your db config as listed above, you need to go to src folder from temrinal and execute `npm sequelize db:create` 
