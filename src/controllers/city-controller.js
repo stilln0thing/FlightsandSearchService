@@ -30,10 +30,10 @@ const create = async (req,res) => {
 }
 
 const destroy = async (req,res) => {
-   
+  
     try {
        
-        const city = await cityService.deleteCity(req.params.id);
+        const response = await cityService.deleteCity(req.params.id);
         return res.status(200).json({
             data: response,
             success: true,
@@ -78,7 +78,7 @@ const update = async (req,res) => {
     try {
         const city = await cityService.updateCity(req.params.id, req.body);
         return res.status(200).json({
-            data: response,
+            data: city,
             success: true,
             message: 'Successfully updated a city',
             err: {}
