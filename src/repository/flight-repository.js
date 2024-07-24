@@ -3,7 +3,7 @@ const { Flights } = require('../models/index')
 class FlightRepository {
    
     async createFlight(data){
-        console.log(data);
+        
         try {
             const flight = await Flights.create(data);
            
