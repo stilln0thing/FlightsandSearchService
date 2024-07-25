@@ -5,7 +5,6 @@ const cityService = new CityService();
 
 
 const create = async (req,res) => {
-
     try {
 
         const city = await cityService.createCity(req.body);

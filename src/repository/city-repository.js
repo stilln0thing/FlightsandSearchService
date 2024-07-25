@@ -3,11 +3,13 @@ const { City } = require('../models/index');
 
 class CityRepository{
     async createCity({ name }){
+        console.log({name});
         try{
             const city = await City.create({name});
+          
             return city;
         } catch(error){
-            console.log("Something went wrong in the repository layer");
+            console.log("Som000ething went wrong in the repository layer");
             throw {error};
         }
     }
