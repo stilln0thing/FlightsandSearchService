@@ -1,4 +1,3 @@
-const { create } = require("../controllers/flight-controller");
 
 class CrudRepository{
   constructor(model){
@@ -6,7 +5,7 @@ class CrudRepository{
   }
 
 
-async create(){
+async create(data){
 try {
     const result = await this.model.create(data);
     return result;
@@ -16,7 +15,7 @@ try {
 }
 async destroy(modelId){
     try {
-     const result = await this.model.destroy({
+     await this.model.destroy({
         where:{
             id:modelId
         }
